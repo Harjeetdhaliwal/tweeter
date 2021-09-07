@@ -1,0 +1,17 @@
+header {
+  height: 400px;
+  width: 100%;
+  background-color: #ab8000;
+  background-image: url('/images/blizzard.png');
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+  top: 90px;
+  z-index: 1;
+}
+
+h2 {
+  margin-top: 0;
+}

@@ -1,16 +1,19 @@
 nav {
   background-color: #4056A1;
   color: #FFFF;
-  height: 120px;
+  height: 120px;width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 1.5rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
 }
 
 span {
   font-family: 'Bungee';
-  
 }
 
 i {
