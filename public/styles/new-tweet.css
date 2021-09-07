@@ -1,19 +1,15 @@
 #tweet-text {
+  display: block;
   border: none;
+  border-bottom: 1px solid;
   background-color: #f4f1ec;
   outline: none;
-  height: 25px;
-  width: 60%;
   resize: none;
-  overflow: hidden;
+  width: 100%;
 }
 
 h2 {
   text-align: center;
-}
-
-hr {
-  border-bottom: 2px solid;
 }
 
 form div {
@@ -27,4 +23,8 @@ button {
   background-color: #4056A1;
   color: #FFFF;
   border: none;
+}
+
+.counter-red {
+  color: red;
 }
