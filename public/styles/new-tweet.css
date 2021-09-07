@@ -1,8 +1,9 @@
 #tweet-text {
   display: block;
   border: none;
-  border-bottom: 1px solid;
+  border-bottom: 3px solid;
   background-color: #f4f1ec;
+  color: #545149;
   outline: none;
   resize: none;
   width: 100%;
