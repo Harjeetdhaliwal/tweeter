@@ -1,0 +1,30 @@
+#tweet-text {
+  border: none;
+  background-color: #f4f1ec;
+  outline: none;
+  height: 25px;
+  width: 60%;
+  resize: none;
+  overflow: hidden;
+}
+
+h2 {
+  text-align: center;
+}
+
+hr {
+  border-bottom: 2px solid;
+}
+
+form div {
+ display: flex;
+ justify-content: space-between;
+ font-family: 'Bungee';
+ margin: 1rem;
+}
+
+button {
+  background-color: #4056A1;
+  color: #FFFF;
+  border: none;
+}
