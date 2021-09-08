@@ -36,13 +36,27 @@ const createTweetElement = function(tweetData) {
   return $tweet;
 };
 
+//Validate input (should not be empty or more than 140 characters)
+const isValidInput = function() {
+  if ($(this).find('.counter').val() < 0) {
+    return alert('Tweet too Long!!');
+  }
+
+  if(!$(this).find('#tweet-text').val()) {
+    return alert("Please enter the tweet");
+  }
+  return true;
+};
+
 
 $(document).ready(function() {
 
   $('form').submit(function(event) {
     event.preventDefault();
-    const data = $(this).serialize();
-    $.post('/tweets', data);
+    if (isValidInput) {
+      const data = $(this).serialize();
+      $.post('/tweets', data);
+    }
   });
 
   //Fetching tweets with AJAX GET request
