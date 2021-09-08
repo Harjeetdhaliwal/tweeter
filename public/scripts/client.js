@@ -14,24 +14,35 @@ const renderTweeets = function(tweets) {
 
 //returns tweet <article> element containing the entire HTML structure of the tweet
 const createTweetElement = function(tweetData) {
-  const $tweet = $(`<article class='tweet'>
+
+  const {user, content, created_at} = tweetData;
+
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  }; 
+
+  const $tweet = `<article class='tweet'>
   <header>
-  <div class='user-info'>
-  <img src="${tweetData.user.avatars}">
-  <p>${tweetData.user.name}</p>
-  </div>
-  <p class='username'>${tweetData.user.handle}</p>
+    <div class='user-info'>
+      <img src="${user.avatars}">
+      <p>${user.name}</p>
+    </div>
+    <p class='username'>${user.handle}</p>
   </header>
-  <p class="tweet-display">${tweetData.content.text}</p>
+  <body>
+    <p class="tweet-display">${escape(content.text)}</p>
+  </body>
   <footer>
-  <p>${timeago.format(tweetData.created_at)}</p>
-  <div class='tweet-icons'>
-  <i class="fas fa-flag"></i>
-  <i class="fas fa-retweet"></i>
-  <i class="fas fa-heart"></i>
-  </div>
+    <p>${timeago.format(created_at)}</p>
+    <div class='tweet-icons'>
+      <i class="fas fa-flag"></i>
+      <i class="fas fa-retweet"></i>
+      <i class="fas fa-heart"></i>
+    </div>
   </footer>
-  </article>`);
+  </article>`;
 
   return $tweet;
 };
