@@ -20,7 +20,7 @@ $(document).ready(function() {
   
   //returns tweet <article> element containing the entire HTML structure of the tweet
   const createTweetElement = function(tweetData) {
-    return `<article class='tweet'>
+    const $tweet = $(`<article class='tweet'>
     <header>
     <div class='user-info'>
     <img src="${tweetData.user.avatars}">
@@ -30,14 +30,16 @@ $(document).ready(function() {
     </header>
     <p class="tweet-display">${tweetData.content.text}</p>
     <footer>
-    <p>${tweetData.created_at}</p>
+    <p>${timeago.format(tweetData.created_at)}</p>
     <div class='tweet-icons'>
     <i class="fas fa-flag"></i>
     <i class="fas fa-retweet"></i>
     <i class="fas fa-heart"></i>
     </div>
     </footer>
-    </article>`
+    </article>`);
+
+    return $tweet;
   };
   
   const $tweet = createTweetElement(tweetData);
