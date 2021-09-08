@@ -8,7 +8,7 @@
 const renderTweeets = function(tweets) {
   for (let tweet of tweets) {
     const $tweet = createTweetElement(tweet);
-    $('#tweets-container').append($tweet);
+    $('#tweets-container').prepend($tweet);
   }
 };
 
@@ -36,27 +36,25 @@ const createTweetElement = function(tweetData) {
   return $tweet;
 };
 
-//Validate input (should not be empty or more than 140 characters)
-const isValidInput = function() {
-  if ($(this).find('.counter').val() < 0) {
-    return alert('Tweet too Long!!');
-  }
-
-  if(!$(this).find('#tweet-text').val()) {
-    return alert("Please enter the tweet");
-  }
-  return true;
-};
-
-
 $(document).ready(function() {
 
   $('form').submit(function(event) {
     event.preventDefault();
-    if (isValidInput) {
-      const data = $(this).serialize();
-      $.post('/tweets', data);
-    }
+    if ($(this).find('.counter').val() < 0) {
+      alert('Tweet too Long!!');
+      return;
+    } else if(!$(this).find('#tweet-text').val()) {
+      alert("Please enter the tweet");
+      return;
+    } 
+    const data = $(this).serialize();
+    $.post('/tweets', data)
+    .then(function() {
+      $('#tweets-container').empty();
+      loadTweets();
+      $('form').find('#tweet-text').val('');
+      $('form').find('.counter').val(140);
+    });
   });
 
   //Fetching tweets with AJAX GET request
