@@ -23,16 +23,32 @@ body {
   flex-direction: column;
 }
 
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
-
  main {
    position: relative;
    top:90px;
    align-self: center;
    width: 90%;
  
+ }
+
+ /* Styles for screen size above 1024px */
+
+ @media only screen and (min-width: 1024px) {
+   body {
+     display: flex;
+     flex-direction: row;
+     margin-top: 110px;
+     padding: 50px;
+   }
+
+   main {
+   width: 140%;
+   }
+   
+   .header{
+     margin-right: 110px;
+   }
+   
  }
 
  
