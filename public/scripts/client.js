@@ -51,11 +51,13 @@ $(document).ready(function() {
 
   $('form').submit(function(event) {
     event.preventDefault();
+    $('.counter-exceed').hide();
+    $('.empty-tweet').hide();
     if ($(this).find('.counter').val() < 0) {
-      alert('Tweet too Long!!');
+      $('.counter-exceed').slideDown();
       return;
     } else if(!$(this).find('#tweet-text').val()) {
-      alert("Please enter the tweet");
+      $('.empty-tweet').slideDown();
       return;
     } 
     const data = $(this).serialize();

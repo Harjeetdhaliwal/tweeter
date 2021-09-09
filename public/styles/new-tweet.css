@@ -29,3 +29,14 @@ button {
 .counter-red {
   color: red;
 }
+
+.counter-exceed {
+  display: none;
+  color: red;
+}
+
+.empty-tweet {
+  display: none;
+  color: red;
+
+}
