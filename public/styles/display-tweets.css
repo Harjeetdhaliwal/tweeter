@@ -5,7 +5,7 @@ article {
 }
 
 article:hover{
-  box-shadow: 5px 5px #778899;
+  box-shadow: 5px 5px #26A69A;
 }
 
 article.tweet header {
@@ -22,7 +22,7 @@ article.tweet header {
 }
 
 .username {
-  color:#B0C4DE;
+  color:#B2DFDB;
   font-weight: 600;
 }
 
@@ -42,7 +42,7 @@ article.tweet footer {
 
 .tweet-icons i {
   margin: 5px;
-  color: #4056A1;
+  color: #24605a;
 }
 
 .tweet-icons i:hover {

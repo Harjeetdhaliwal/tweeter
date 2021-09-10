@@ -1,7 +1,7 @@
 header.header {
   height: 400px;
   width: 100%;
-  background-color: #ab8000;
+  background-color: #24605a;
   background-image: url('/images/blizzard.png');
   display: flex;
   flex-direction: column;
@@ -10,8 +10,10 @@ header.header {
   position: relative;
   top: 90px;
   z-index: 1;
+  margin-bottom: 25px;
 }
 
 h2 {
   margin-top: 0;
+  color: #ffff;
 }

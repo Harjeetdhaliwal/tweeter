@@ -7,10 +7,15 @@
   outline: none;
   resize: none;
   width: 100%;
+  height: 35px;
 }
 
 h2 {
   text-align: center;
+}
+
+form label{
+  font-weight: 600;
 }
 
 form div {
@@ -21,7 +26,7 @@ form div {
 }
 
 button {
-  background-color: #4056A1;
+  background-color: #24605a;
   color: #FFFF;
   border: none;
 }
